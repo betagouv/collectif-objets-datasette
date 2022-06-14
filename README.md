@@ -15,3 +15,9 @@ Serveur web public publiant des données utilisées par Collectif Objets
 ##
 
 http://127.0.0.1:8001/collectif-objets.json?_shape=objects&sql=select+%0D%0A++mairies.code_insee%2C+%0D%0A++mairies.nom%2C+%0D%0A++COUNT(palissy.REF)+as+objets_count%2C%0D%0A++mairies.latitude%2C+%0D%0A++mairies.longitude%0D%0Afrom+palissy%0D%0AINNER+JOIN+mairies+ON+mairies.code_insee+%3D+palissy.INSEE%0D%0AGROUP+BY+mairies.code_insee%0D%0AORDER+BY+mairies.code_insee+ASC
+
+SELECT DPT as departement, count(REF) as objets_count
+FROM palissy
+WHERE DPT IS NOT NULL
+GROUP BY DPT
+ORDER BY DPT ASC;
