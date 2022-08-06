@@ -36,7 +36,7 @@ itsdangerous = "*"
 python-multipart = "*"
 
 [package.extras]
-test = ["pytest", "pytest-asyncio", "httpx (>=0.16)", "starlette", "pytest-cov", "asgi-lifespan"]
+test = ["asgi-lifespan", "pytest-cov", "starlette", "httpx (>=0.16)", "pytest-asyncio", "pytest"]
 
 [[package]]
 name = "asgiref"
@@ -92,7 +92,7 @@ py-lru-cache = ">=0.1.4,<0.2.0"
 six = "*"
 
 [package.extras]
-test = ["pytest", "cogapp"]
+test = ["cogapp", "pytest"]
 
 [[package]]
 name = "datasette"
@@ -126,6 +126,20 @@ rich = ["rich"]
 test = ["pytest (>=5.2.2,<7.2.0)", "pytest-xdist (>=2.2.1,<2.6)", "pytest-asyncio (>=0.17,<0.19)", "beautifulsoup4 (>=4.8.1,<4.11.0)", "black (==22.1.0)", "pytest-timeout (>=1.4.2,<2.2)", "trustme (>=0.7,<0.10)", "cogapp (>=3.3.0)"]
 
 [[package]]
+name = "datasette-publish-fly"
+version = "1.1.1"
+description = "Datasette plugin for publishing data using Fly"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+datasette = ">=0.60.2"
+
+[package.extras]
+test = ["cogapp", "pytest-mock", "pytest"]
+
+[[package]]
 name = "dateparser"
 version = "1.1.1"
 description = "Date parsing library designed to parse dates from HTML pages"
@@ -140,9 +154,9 @@ regex = "<2019.02.19 || >2019.02.19,<2021.8.27 || >2021.8.27,<2022.3.15"
 tzlocal = "*"
 
 [package.extras]
-calendars = ["convertdate", "hijri-converter", "convertdate"]
-fasttext = ["fasttext"]
 langdetect = ["langdetect"]
+fasttext = ["fasttext"]
+calendars = ["convertdate", "hijri-converter", "convertdate"]
 
 [[package]]
 name = "h11"
@@ -310,8 +324,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
+testing = ["pytest-benchmark", "pytest"]
+dev = ["tox", "pre-commit"]
 
 [[package]]
 name = "py-lru-cache"
@@ -467,7 +481,7 @@ standard = ["websockets (>=10.0)", "httptools (>=0.4.0)", "watchgod (>=0.6)", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0d8143d76dac160edc0b8f86513e0e660b2d11f1a96b079cdefae1f99b3779cf"
+content-hash = "0ffc3ef65571c9038e267148c0eab686c751843d4a540e92b2a51768f9b5cacb"
 
 [metadata.files]
 aiofiles = [
@@ -504,6 +518,10 @@ csvs-to-sqlite = [
 datasette = [
     {file = "datasette-0.61.1-py3-none-any.whl", hash = "sha256:96978386e8e70cf42d09016236ed32b9de742e7861b98661cbb6cab7986dd3dd"},
     {file = "datasette-0.61.1.tar.gz", hash = "sha256:060ed8737c5fc6d83e6ab35b84d91f9c0e39e3caf7d794106e39b4bef9b559eb"},
+]
+datasette-publish-fly = [
+    {file = "datasette-publish-fly-1.1.1.tar.gz", hash = "sha256:5194534e3ada64950c70c0c066d687c415cd3cb6750d1a33e704b6c8aeccfd81"},
+    {file = "datasette_publish_fly-1.1.1-py3-none-any.whl", hash = "sha256:8e8d20eba46d11a0d0379ded5731e96bc7489cf9e06371ff7322f8f81838b0c0"},
 ]
 dateparser = [
     {file = "dateparser-1.1.1-py2.py3-none-any.whl", hash = "sha256:9600874312ff28a41f96ec7ccdc73be1d1c44435719da47fea3339d55ff5a628"},
