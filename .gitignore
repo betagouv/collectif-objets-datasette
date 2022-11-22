@@ -1,2 +1,2 @@
-data/*.sqlite
-data/*.csv
+data.sqlite
+data_scrapped/*.csv

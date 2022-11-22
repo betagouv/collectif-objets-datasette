@@ -1,0 +1,91 @@
+title: Données du patrimoine et des communes françaises
+description_html: |-
+  <p>Ces données proviennent de POP et de service-public.fr. Elles sont utilisées dans le cadre du projet <a href="https://collectif-objets.beta.gouv.fr">Collectif Objets</a> du Ministère de la Culture.</p>
+  <p><a href="https://github.com/adipasquale/collectif-objets-datasette">Voir plus de détails sur GitHub</a></p>
+databases:
+  data:
+    title: Données
+    description_html: |-
+      <p>Ces données proviennent de POP et de service-public.fr. Elles sont utilisées dans le cadre du projet <a href="https://collectif-objets.beta.gouv.fr">Collectif Objets</a> du Ministère de la Culture.</p>
+      <p><a href="https://github.com/adipasquale/collectif-objets-datasette">Voir plus de détails sur GitHub</a></p>
+    tables:
+      palissy:
+        description_html: |-
+          <div style="display: flex; gap: 2rem;">
+            <p>
+              Base Palissy - Objets protégés - patrimoine mobilier
+              <br>
+              <a href="/metadata/palissy">Voir la description des colonnes</a>
+            </p>
+            <p>
+              Les données sont celles de <a href="https://pop.culture.gouv.fr/">POP</a>, la Plateforme Ouverte du Patrimoine.
+              <br>
+              Ces données ont été scrappées depuis le site web de POP.
+              <br>
+              <a href="https://github.com/adipasquale/pop-scraper">Code source du scrapper sur GitHub</a>
+            </p>
+          </div>
+      merimee:
+        description_html: |-
+          <div style="display: flex; gap: 2rem;">
+            <p>
+              Base Mérimée - Édifices protégés - patrimoine architectural
+              <br>
+              <a href="/metadata/merimee">Voir la description des colonnes</a>
+            </p>
+            <p>
+              Les données sont celles de <a href="https://pop.culture.gouv.fr/">POP</a>, la Plateforme Ouverte du Patrimoine.
+              <br>
+              Ces données ont été scrappées depuis le site web de POP.
+              <br>
+              <a href="https://github.com/adipasquale/pop-scraper">Code source du scrapper sur GitHub</a>
+            </p>
+          </div>
+      memoire:
+        description_html: |-
+          <div style="display: flex; gap: 2rem;">
+            <p>
+              Base Mémoire - Photographies
+              <br>
+              <a href="/metadata/memoire">Voir la description des colonnes</a>
+            </p>
+            <p>
+              Les données sont celles de <a href="https://pop.culture.gouv.fr/">POP</a>, la Plateforme Ouverte du Patrimoine.
+              <br>
+              Ces données ont été scrappées depuis le site web de POP.
+              <br>
+              <a href="https://github.com/adipasquale/pop-scraper">Code source du scrapper sur GitHub</a>
+            </p>
+          </div>
+      mairies:
+        description_html: |-
+          <div style="display: flex; gap: 2rem;">
+            <p>
+              Données sur les mairies des communes françaises
+              <br>
+              Ces données viennent de <a href="https://www.service-public.fr/">service-public.fr</a>.
+            </p>
+            <p>
+
+              Ces données ont été récupérées depuis les exports open data grace à un outil de la base d'adresses nationale
+              <br>
+              <a href="https://github.com/BaseAdresseNationale/annuaire-api">Code source de l'outil</a>
+            </p>
+          </div>
+  metadata:
+    title: Métadonnées - Description des colonnes
+    source: Code source de POP
+    source_url: https://github.com/betagouv/pop/tree/master/apps/api/csv
+    tables:
+      palissy:
+        description_html: Description des champs de la table <a href="/data/palissy">Palissy</a>
+        source: Code source de POP
+        source_url: https://github.com/betagouv/pop/tree/master/apps/api/csv
+      memoire:
+        description_html: Description des champs de la table <a href="/data/memoire">Mémoire</a>
+        source: Code source de POP
+        source_url: https://github.com/betagouv/pop/tree/master/apps/api/csv
+      merimee:
+        description_html: Description des champs de la table <a href="/data/merimee">Mérimée</a>
+        source: Code source de POP
+        source_url: https://github.com/betagouv/pop/tree/master/apps/api/csv

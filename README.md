@@ -14,10 +14,10 @@ Serveur web public publiant des données utilisées par Collectif Objets
 
 Il faut récupérer deux fichiers CSV :
 
-1. `data/palissy.csv` récupérable suite à un scrap intégral de Palissy lancé sur l'API de POP via [pop-scraper](https://github.com/adipasquale/pop-scraper)
-2. `data/mairies.csv` récupérable depuis le repo [data](https://github.com/adipasquale/collectif-objets-data). Le fichier original est récupéré via [ce fork d'annuaire-api](https://github.com/BaseAdresseNationale/annuaire-api) puis transformé par un notebook python.
+1. `data_scrapped/palissy.csv` récupérable suite à un scrap intégral de Palissy lancé sur l'API de POP via [pop-scraper](https://github.com/adipasquale/pop-scraper)
+2. `data_scrapped/mairies.csv` récupérable depuis le repo [data](https://github.com/adipasquale/collectif-objets-data). Le fichier original est récupéré via [ce fork d'annuaire-api](https://github.com/BaseAdresseNationale/annuaire-api) puis transformé par un notebook python.
 
-`make prepare_sqlite` génère `data.collectif-objets.sqlite` à partir de ces deux fichiers CSV.
+`make prepare_sqlite` génère `data.sqlite` à partir de ces deux fichiers CSV.
 
 ## Scripts
 
