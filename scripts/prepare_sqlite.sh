@@ -1,4 +1,4 @@
-rm -rf data.sqlite
+rm -rf data.sqlite metadata.sqlite
 
 poetry run csvs-to-sqlite data_scrapped/palissy.csv data.sqlite \
   --index DPT --index INSEE \
