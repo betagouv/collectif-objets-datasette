@@ -10,18 +10,30 @@ Serveur web public publiant des données utilisées par Collectif Objets
 - installer Poetry
 - `poetry install`
 
-## Préparation
+## Origine des CSV sources
 
-Il faut récupérer deux fichiers CSV :
+Il faut récupérer plusieurs fichiers CSV :
 
-1. `data_scrapped/palissy.csv` récupérable suite à un scrap intégral de Palissy lancé sur l'API de POP via [pop-scraper](https://github.com/adipasquale/pop-scraper)
-2. `data_scrapped/mairies.csv` récupérable depuis le repo [data](https://github.com/adipasquale/collectif-objets-data). Le fichier original est récupéré via [ce fork d'annuaire-api](https://github.com/BaseAdresseNationale/annuaire-api) puis transformé par un notebook python.
+- `data_scrapped/palissy.csv`
+- `data_scrapped/palissy_to_memoire.csv`
+- `data_scrapped/palissy_to_merimee.csv`
+- `data_scrapped/merimee.csv`
+- `data_scrapped/merimee_to_memoire.csv`
 
-`make prepare_sqlite` génère `data.sqlite` à partir de ces deux fichiers CSV.
+Ces 6 CSVs proviennent de scrapings de POP lancé sur leur API ElasticSearch via [pop-scraper](https://github.com/adipasquale/pop-scraper)
+
+- `metadata/memoire.csv`
+- `metadata/merimee.csv`
+- `metadata/palissy.csv`
+
+Ces fichiers décrivant les colonnes des tables POP proviennent du code source de POP : [github.com/betagouv/pop/tree/master/apps/api/csv](https://github.com/betagouv/pop/tree/master/apps/api/csv).
+
+Enfin `data_scrapped/mairies.csv` est récupérable depuis le repo [data](https://github.com/adipasquale/collectif-objets-data). Le fichier original est récupéré via [ce fork d'annuaire-api](https://github.com/BaseAdresseNationale/annuaire-api) puis transformé par un notebook python.
 
 ## Scripts
 
-- `make datasette` démarre un serveur local
+- `make prepare_sqlite` regénère `/data.sqlite` et `/metadata.sqlite` à partir des fichiers CSV sources.
+- `make dev` démarre un serveur local
 - `make publish_datasette` déploie sur Google Cloud Run (qui permet de scaler à 0 entre les requêtes peu fréquentes)
 
 ## Exemples de requêtes

@@ -4,7 +4,7 @@ install:
 prepare_sqlite:
 	./scripts/prepare_sqlite.sh
 
-datasette:
+dev:
 	poetry run datasette \
 		--setting allow_facet off \
 		--setting default_page_size 20 \
