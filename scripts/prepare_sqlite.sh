@@ -1,6 +1,6 @@
-rm -rf data.sqlite metadata.sqlite
+rm -rf app/*.sqlite
 
-poetry run csvs-to-sqlite data_scrapped/palissy.csv data.sqlite \
+poetry run csvs-to-sqlite data_scrapped/palissy.csv app/data.sqlite \
   --index DPT --index INSEE \
   --just-strings \
   --shape \
@@ -129,7 +129,7 @@ poetry run csvs-to-sqlite data_scrapped/palissy.csv data.sqlite \
   WRENV:WRENV(TEXT),
   ZONE:ZONE(TEXT)"
 
-poetry run csvs-to-sqlite data_scrapped/merimee.csv data.sqlite \
+poetry run csvs-to-sqlite data_scrapped/merimee.csv app/data.sqlite \
   --index PRODUCTEUR --index INSEE --index DPT \
   --just-strings \
   --shape \
@@ -266,10 +266,10 @@ poetry run csvs-to-sqlite data_scrapped/merimee.csv data.sqlite \
   WRENV:WRENV(TEXT),
   ZONE:ZONE(TEXT)"
 
-poetry run csvs-to-sqlite data_scrapped/palissy_to_merimee.csv data.sqlite --just-strings --index REF_PALISSY --index REF_MERIMEE
-poetry run csvs-to-sqlite data_scrapped/palissy_to_memoire.csv data.sqlite --just-strings --index REF_PALISSY
-poetry run csvs-to-sqlite data_scrapped/merimee_to_memoire.csv data.sqlite --just-strings --index REF_MERIMEE
+poetry run csvs-to-sqlite data_scrapped/palissy_to_merimee.csv app/data.sqlite --just-strings --index REF_PALISSY --index REF_MERIMEE
+poetry run csvs-to-sqlite data_scrapped/palissy_to_memoire.csv app/data.sqlite --just-strings --index REF_PALISSY
+poetry run csvs-to-sqlite data_scrapped/merimee_to_memoire.csv app/data.sqlite --just-strings --index REF_MERIMEE
 
-poetry run csvs-to-sqlite data_scrapped/mairies.csv data.sqlite --index code_insee --index departement
+poetry run csvs-to-sqlite data_scrapped/mairies.csv app/data.sqlite --index code_insee --index departement
 
-poetry run csvs-to-sqlite metadata/*.csv metadata.sqlite
+poetry run csvs-to-sqlite metadata/*.csv app/metadata.sqlite

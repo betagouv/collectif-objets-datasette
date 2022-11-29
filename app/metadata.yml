@@ -10,6 +10,7 @@ databases:
       <p><a href="https://github.com/adipasquale/collectif-objets-datasette">Voir plus de détails sur GitHub</a></p>
     tables:
       palissy:
+        size: 20
         description_html: |-
           <div style="display: flex; gap: 2rem;">
             <p>
@@ -26,6 +27,7 @@ databases:
             </p>
           </div>
       merimee:
+        size: 20
         description_html: |-
           <div style="display: flex; gap: 2rem;">
             <p>
@@ -42,6 +44,7 @@ databases:
             </p>
           </div>
       memoire:
+        size: 20
         description_html: |-
           <div style="display: flex; gap: 2rem;">
             <p>
