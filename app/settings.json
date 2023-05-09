@@ -1,3 +1,4 @@
 {
-  "suggest_facets": "off"
+  "suggest_facets": "off",
+  "sql_time_limit_ms": 10000
 }

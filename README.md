@@ -34,7 +34,7 @@ Enfin `data_scrapped/mairies.csv` est récupérable depuis le repo [data](https:
 
 - `make prepare_sqlite` regénère `/data.sqlite` et `/metadata.sqlite` à partir des fichiers CSV sources.
 - `make dev` démarre un serveur local
-- `make publish_datasette` déploie sur Google Cloud Run (qui permet de scaler à 0 entre les requêtes peu fréquentes)
+- `make deploy` déploie vers https://collectif-objets-datasette.fly.dev/ hébergé sur Fly.io
 
 ## Exemples de requêtes
 
