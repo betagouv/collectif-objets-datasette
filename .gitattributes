@@ -1,0 +1,7 @@
+data_scrapped/merimee_to_memoire.csv filter=lfs diff=lfs merge=lfs -text
+data_scrapped/palissy.csv filter=lfs diff=lfs merge=lfs -text
+data_scrapped/palissy_to_memoire.csv filter=lfs diff=lfs merge=lfs -text
+data_scrapped/palissy_to_merimee.csv filter=lfs diff=lfs merge=lfs -text
+data_scrapped/mairies.csv filter=lfs diff=lfs merge=lfs -text
+data_scrapped/merimee.csv filter=lfs diff=lfs merge=lfs -text
+app/data.sqlite filter=lfs diff=lfs merge=lfs -text

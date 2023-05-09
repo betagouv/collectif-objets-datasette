@@ -20,7 +20,7 @@ Il faut récupérer plusieurs fichiers CSV :
 - `data_scrapped/merimee.csv`
 - `data_scrapped/merimee_to_memoire.csv`
 
-Ces 6 CSVs proviennent de scrapings de POP lancé sur leur API ElasticSearch via [pop-scraper](https://github.com/adipasquale/pop-scraper)
+Ces 5 CSVs proviennent de scrapings de POP lancé sur leur API ElasticSearch via [pop-scraper](https://github.com/adipasquale/pop-scraper)
 
 - `metadata/memoire.csv`
 - `metadata/merimee.csv`

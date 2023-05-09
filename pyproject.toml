@@ -10,6 +10,7 @@ python = "^3.10"
 datasette = "^0"
 csvs-to-sqlite = "^1"
 datasette-publish-fly = "^1"
+pandas = "^1"
 
 [tool.poetry.dev-dependencies]
 
